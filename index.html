@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="everify.js"></script>
+</head>
+<body>
+
+<input type="text" name='test' value="122223" >
+
+<input type="text" name='email' value="491229889@qq.com" >
+
+<input type="text" name='phone' value="15618332825" >
+
+<input type="radio" name='rd' value="1">
+<input type="radio" name='rd' value="2" checked>
+
+<input type="radio" name='rd1' value="1">
+<input type="radio" name='rd1' value="2">
+
+<input type="checkbox" name='cb' value='cxx'>
+<input type="checkbox" name='cb' value='c1xx' checked>
+<input type="checkbox" name='cb' value='c2xx'>
+
+<select name="se" id="se">
+	<option value="1">1xx</option>
+	<option value="2">2xx</option>
+	<option value="3" selected>3xx</option>
+	<option value="4">4xx</option>
+</select>
+
+<select name="sm" multiple>
+  <option selected value="s1">aaa</option>
+  <option selected value="s2">aaa</option>
+  </select>
+</body>
+<script>
+	console.log($EV.v('email','email'));
+	console.log($EV.v('email'));
+	console.log($EV.v('test','num'));
+	console.log($EV.v('test'));
+	console.log($EV.v('phone','phone'));
+	console.log($EV.v('phone'));
+	console.log($EV.v('bucunzai')); //返回undefined 可以使用 ==null来判断
+
+	console.log($EV.v('rd'));
+	$EV.v('rd1');
+	console.log($EV.v('cb'));
+	console.log($EV.v('se'));
+	console.log($EV.v('sm'));
+</script>
+
+</html>
