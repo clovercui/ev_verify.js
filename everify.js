@@ -9,7 +9,7 @@ var $EV = (function(window,document){
        	urlRegex : /^((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$/,
        	dateRegex : /\d{4}-\d{1,2}-\d{1,2}/
 	}
-	var verify = function(element,regtype){ //element 为元素name     regtype为验证类型，如果只是取值则不用传name
+	var verify = function(element,regtype){ //element 为元素name     regtype为验证类型，如果只是取值则不用传regtype
 		var text = getValue(element);
 
 		if(regtype==null){
@@ -21,7 +21,7 @@ var $EV = (function(window,document){
 
 		regtype = Regrule[regtype+'Regex'];
 		if ( regtype == null) { //同时判断null和undefined  ,这里regtype一般为undefined
-			console.log('regtype is '+regtype);
+			console.log( regtype+' Regtype is '+regtype);
 			return regtype;
 		};
 		if(regtype =='phone'){
